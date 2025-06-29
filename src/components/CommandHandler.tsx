@@ -331,7 +331,7 @@ export class CommandHandler {
       '  echo <text>     Display text',
       '  contact         Show contact information',
       '  help            Show this help message',
-      '  clear           Clear terminal but his wont work (cries) just refresh the page ',
+      '  clear           Clears the terminal ofc .',
       '',
       'Directories to explore:',
       '  projects        My development projects',
