@@ -3,6 +3,7 @@ import { DirectoryStructure, TerminalLine } from './Terminal';
 interface CommandContext {
   addLine: (line: Omit<TerminalLine, 'id'>) => void;
   setCurrentDirectory: (dir: string[]) => void;
+  clearLines: () => void;
 }
 
 export class CommandHandler {
@@ -12,7 +13,7 @@ export class CommandHandler {
     fileSystem: DirectoryStructure,
     context: CommandContext
   ) {
-    const { addLine, setCurrentDirectory } = context;
+     const { addLine, setCurrentDirectory, clearLines } = context;
     const [cmd, ...args] = command.trim().split(' ');
 
     switch (cmd.toLowerCase()) {
@@ -49,11 +50,7 @@ export class CommandHandler {
         break;
       
       case 'clear':
-        addLine({
-          type: 'output',
-          content: 'Trust me i tried everything , this just wont work (cries) just refresh the page :)',
-          timestamp: Date.now()
-        });
+        clearLines();
         break;
       
       case 'whoami':
@@ -103,7 +100,7 @@ export class CommandHandler {
     }
   }
 
-  static handleEcho(args: string[], addLine: (line: Omit<TerminalLine, 'id'>) => void) {
+    private static handleEcho(args: string[], addLine: (line: Omit<TerminalLine, 'id'>) => void) {
     const message = args.join(' ');
     addLine({
       type: 'output',

@@ -141,6 +141,9 @@ Current goals:
     };
     setLines(prev => [...prev, newLine]);
   };
+    const clearLines = () => {
+    setLines([]);
+  };
 
   const handleCommand = (command: string) => {
     // Add command to history
@@ -159,7 +162,8 @@ Current goals:
     // Process command
     CommandHandler.execute(command, currentDirectory, fileSystem, {
       addLine,
-      setCurrentDirectory
+      setCurrentDirectory,
+      clearLines
     });
   };
 
