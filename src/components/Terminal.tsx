@@ -179,7 +179,7 @@ Current goals:
       <div className="mb-8 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-2 font-mono">
           <span className="bg-gradient-to-r from-white via-amber-200 to-orange-300 bg-clip-text text-transparent bg-[length:200%_100%] animate-[gradient-shift_3s_ease-in-out_infinite]">
-            Welcome
+            Welcome to my Terminal-Portfolio
           </span>
         </h1>
         <div className="h-1 w-32 bg-gradient-to-r from-white to-amber-200 mx-auto rounded-full opacity-60"></div>
