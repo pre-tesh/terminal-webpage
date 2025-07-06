@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { TerminalOutput } from './TerminalOutput';
 import { TerminalInput } from './TerminalInput';
 import { CommandHandler } from './CommandHandler';
+import AnimatedBackground from './AnimatedBackground';
 
 export interface TerminalLine {
   id: string;
@@ -32,6 +33,7 @@ const Terminal = () => {
         'projects': {
           type: 'directory',
           children: {
+            
             'kernel-modules': { type: 'file', content: 'Custom Linux kernel modules and drivers - https://github.com/pritesh-kernel/kernel-modules' },
             'system-tools': { type: 'file', content: 'Low-level system utilities in C - https://github.com/pritesh-kernel/system-tools' },
             'bootloader': { type: 'file', content: 'Custom bootloader implementation - https://github.com/pritesh-kernel/bootloader' },
@@ -65,7 +67,8 @@ Current goals:
 • Contributing to mainline Linux kernel
 • Mastering kernel debugging and development workflows
 • Building expertise in low-level system optimization`
-            }
+            },
+      'webpage': { type: 'file', content: 'https://github.com/pre-tesh' }
           }
         },
         'contact': {
@@ -175,6 +178,9 @@ Current goals:
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800 flex flex-col items-center justify-center p-4">
+          {/* Animated Background */}
+      <AnimatedBackground />
+      
       {/* Welcome Title with animated beige gradient */}
       <div className="mb-8 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-2 font-mono">

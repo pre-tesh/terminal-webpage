@@ -171,6 +171,20 @@ export class CommandHandler {
         return;
       }
     }
+
+    if (currentDir === 'about-me') {
+      if (target === 'webpage') {
+        setTimeout(() => {
+          window.open('webpageaboutme.html', '_blank');
+        }, 500);
+        addLine({
+          type: 'output',
+          content: '📝 Opening Webpage...',
+          timestamp: Date.now()
+        });
+        return;
+      }
+    }
     
     // Handle projects (keeping existing functionality)
     if (currentDir === 'projects') {
@@ -363,7 +377,7 @@ export class CommandHandler {
   ) {
     const command = args.join(' ');
     
-    if (command === 'make me a sandwich') {
+    if (command === 'makemeasandwich') {
       setTimeout(() => {
         addLine({
           type: 'output',
