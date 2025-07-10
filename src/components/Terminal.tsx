@@ -68,7 +68,7 @@ Current goals:
 • Mastering kernel debugging and development workflows
 • Building expertise in low-level system optimization`
             },
-      'webpage': { type: 'file', content: 'https://github.com/pre-tesh' }
+      'webpage': { type: 'file', content: 'webpageaboutme.html' }
           }
         },
         'contact': {
