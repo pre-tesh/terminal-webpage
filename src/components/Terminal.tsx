@@ -80,7 +80,7 @@ Current goals:
             'twitter': { type: 'file', content: 'https://x.com/PriteshRodge' }
           }
         },
-        'music': {
+        ' good-music': {
           type: 'directory',
           children: {
             'applemusic': { type: 'file', content: 'https://music.apple.com/in/playlist/the-one/pl.u-9N9L2yes153k0G7' },
