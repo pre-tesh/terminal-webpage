@@ -348,7 +348,7 @@ export class CommandHandler {
       '  clear           Clears the terminal ofc .',
       '',
       'Directories to explore:',
-      '  projects        My development projects',
+      '  projects        My development projects - i have to update this links :-3',
       '  about-me        Personal information and journey',
       '  contact         Ways to reach me',
       '  music           Terminal music player',
@@ -358,6 +358,8 @@ export class CommandHandler {
       '  cd projects && open kernel-modules',
       '  cd music && open play',
       '  cd blog && open blog'
+      ' open webpage'
+      ' open applemusic'
     ];
 
     helpText.forEach((line, index) => {
